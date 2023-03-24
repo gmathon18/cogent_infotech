@@ -39,7 +39,7 @@ public class ProductDAO {
 		boolean found = false;
 		
 		for(Product p: prod) {
-			
+			if(p!=null) {
 			if(p.getID().equals(productID)) {
 				found = true;
 				System.out.println("Would you like to update the product name? Please enter 1 for Yes and 2 for No");
@@ -64,6 +64,7 @@ public class ProductDAO {
 				}
 				break;
 			}
+			}
 		}
 		if(found == false) {
 			System.out.println("The product ID does not match any entry available.");
@@ -73,13 +74,14 @@ public class ProductDAO {
 	public void delete(Product [] prod, String prodID ) {
 		boolean found = false;
 		for(int i = 0; i<prod.length;i++) {
+			if(prod[i]!= null) {
 			if(prod[i].getID().equals(prodID)) {
 				prod[i] = null;
 				found = true;
 				System.out.println("The product has been deleted successfully");
 				break;
 			}
-			
+			}
 		}
 		
 		if(found == false) {
