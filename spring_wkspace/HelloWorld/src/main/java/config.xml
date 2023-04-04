@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+    <bean name="hello" class="cogent.infotech.com.Greeting"></bean>
+    
+    <bean name="emp" class="cogent.infotech.com.Employee" p:id="209" p:name="Gurmail"></bean>
+    
+    <bean name="person" class="cogent.infotech.com.Person">
+    	<constructor-arg value="1001"></constructor-arg>
+    	<constructor-arg value="Shiva"></constructor-arg>
+    	<constructor-arg value="30"></constructor-arg>
+    	
+   	</bean>
+
+	<bean name="hospital" class="cogent.infotech.com.Hospital">
+		<property name="name">
+			<value>Global Hospital</value>
+		</property>
+		<property name="department">
+			<list>
+				<value>Front office</value>
+				<value>In Patient</value>
+				<value>Out Patient</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean name="customer" class="cogent.infotech.com.Customer"
+		p:id="2001">
+		<property name="products">
+			<map>
+				<entry key="1001" value="IPhone"></entry>
+				<entry key="1002" value="Samsung"></entry>
+				<entry key="1003" value="Oppo"></entry>
+				<entry key="1004" value="okia"></entry>
+
+			</map>
+		</property>
+	</bean>
+
+	<bean name="cardealer" class="cogent.infotech.com.CarDealer">
+		<property name="name" value="Newyork Dealer"></property>
+		<property name="models">
+			<set>
+				<value>Honda</value>
+				<value>BMW</value>
+				<value>Honda</value>
+			</set>
+		</property>
+
+	</bean>
+	
+	<bean name="scores" class="cogent.infotech.com.Scores"
+	p:maths="80" p:physics="67" p:chemistry="83"></bean>
+	<bean name="students" class="cogent.infotech.com.Student"
+		p:scores-ref="scores"></bean>
+ </beans>
