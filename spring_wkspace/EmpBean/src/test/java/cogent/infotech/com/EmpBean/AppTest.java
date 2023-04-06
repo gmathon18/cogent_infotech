@@ -1,4 +1,4 @@
-package cogent.infotech.com.HelloWorld;
+package cogent.infotech.com.EmpBean;
 
 import static org.junit.Assert.assertTrue;
 

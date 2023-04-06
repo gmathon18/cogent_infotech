@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+    
+    <!---Wiring Example --> 
+
+	<bean name="person" class="cogent.infotech.wiring.Person" autowire="byType"></bean>
+	<bean name="car" class="cogent.infotech.wiring.Car">
+		<property name="model" value="Honda City"></property>
+		<property name="price" value="5000"></property>
+	</bean>
+	<bean name="add" class="cogent.infotech.wiring.Address">
+		<property name="hno" value="245"></property>
+		<property name="street" value="any street"></property>
+		<property name="city" value="newyork"></property>
+	</bean>
+ </beans>

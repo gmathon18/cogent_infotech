@@ -61,4 +61,6 @@
 	p:maths="80" p:physics="67" p:chemistry="83"></bean>
 	<bean name="students" class="cogent.infotech.com.Student"
 		p:scores-ref="scores"></bean>
+		
+	<bean name="patient" class="cogent.infotech.com.lc.Patient" p:id="123" init-method= "init" destroy-method="destroy"></bean>
  </beans>
