@@ -19,10 +19,10 @@ public class Movie {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long movieId;
+	private int movieId;
 	private String movieName;
 	private String movieGenre;
-	private Long movieDuration;
+	private int movieDuration;
 	private String releaseDate;
 	
 	
