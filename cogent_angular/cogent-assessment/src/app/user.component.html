@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <h3 class="text-center">User Creation</h3>
+        <div class="card-body">
+          <form novalidate #loginform='ngForm' (ngSubmit)="addUser(loginform)">
+            <div>
+              <label for="Name"> Name</label>
+              <input type="text" [(ngModel)]=" model.name" name="name" required>
+            </div>
+            <div>
+              <label for="Age">Age</label>
+              <input type="number" [(ngModel)]="model.age" name="age">
+            </div>
+            <div>
+              <label for="Salary">Salary</label>
+              <input type="number" [(ngModel)]="model.salary" name="salary">
+            </div>
+            <button [disabled]=" loginform.invalid" type="submit">Submit</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+  <div class="container">
+
+    <table class="table table-striped">
+      <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.age}}</td>
+          <td>{{user.salary}}</td>
+          <td>
+            <button (click)="editForm()">Edit User</button>
+
+            <form *ngIf="showForm" novalidate #loginform='ngForm' (ngSubmit)="editUser(loginform.value) ">
+
+              <div>
+                <label for="Name"> Name</label>
+                <input type="text" (ngModel)=" user.name" name="name" required>
+              </div>
+              <div>
+                <label for="Age">Age</label>
+                <input type="number" (ngModel)="user.age" name="age" required>
+              </div>
+              <div>
+                <label for="Salary">Salary</label>
+                <input type="number" (ngModel)="user.salary" name="salary" required>
+              </div>
+              <button (click)="addUser(loginform)" type="submit">Submit</button>
+            </form>
+            <button (click)="delete(user.id)">Remove User</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</html>
