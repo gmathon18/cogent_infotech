@@ -1,0 +1,53 @@
+<h1>{{title}}</h1>>
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Price</th>
+    <th>Stock</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let itemholder of itemholders">
+      <ng-container *ngIf="itemholder.price > 100">
+        <td>{{itemholder.id}}</td>
+        <td>{{itemholder.title}}</td>
+        <td>{{itemholder.price|currency}}</td>
+        <td>{{itemholder.stock}}</td>
+      </ng-container>
+    </tr>
+  </tbody>
+  <div *ngIf="showMessage">
+    <span>Cogent Infotech DHM-65 Batch</span>
+  </div>
+
+  <h3>Select Option</h3>
+  <select (change)="SetDropDownValue($event)">
+    <option value="">Select</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+  </select>
+
+  <div [ngSwitch]='dropDownValue'>
+    <h3 *ngSwitchCase="'1'">Monday</h3>
+    <h3 *ngSwitchCase="'2'">Tuesday</h3>
+    <h3 *ngSwitchCase="'3'">Wednesday</h3>
+    <h3 *ngSwitchCase="'4'">Thursday</h3>
+    <h3 *ngSwitchCase="'5'">Friday</h3>
+    <h3 *ngSwitchCase="'6'">Saturday</h3>
+    <h3 *ngSwitchCase="'7'">Sunday</h3>
+    <h4 *ngSwitchDefault="">Not Valid Input</h4>
+  </div>
+</table>
+
+<div>
+  {{companyName|uppercase}}
+</div>
+<div>
+  {{productName|uppercase}}<br>
+  {{productPrice|currency}}
+</div>

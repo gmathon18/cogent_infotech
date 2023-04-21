@@ -1,0 +1,155 @@
+<DOCTYPE !HTML>
+  <html>
+    <head>
+      <title>My Canvas</title>
+      <script src="external.js"></script>
+      <script>
+        function yellow() {
+          document.getElementById("name_txt").style.background = "yellow";
+        }
+        function validate() {
+
+          if (document.getElementById("name_txt").value == "" || document.getElementById("password_txt").value == "") {
+
+            alert("Please enter all fields");
+            document.login_frm.user.focus();
+            return false;
+          }
+          return true;
+        }
+
+        function myToString() {
+          return "" + this.title + " by " + this.author;
+        }
+
+        function showAll() {
+          window.alert(this.toString());
+        }
+
+        var myBook = {
+          author: "JK",
+          title: "H2P",
+          print: showAll,
+          toString: myToString
+
+        };
+
+        function sayHello(name) {
+          window.alert("Hello " + name);
+        }
+
+        var mySite = new Object();
+        var ourBook = new Object();
+        ourBook.author = "Shakespeare";
+
+        ourBook.greet = sayHello;
+        ourBook.greet(ourBook.author);
+        myBook.print();
+        delete ourBook.greet;
+
+
+        var book = {
+          bookName: "Book Name",
+          bookAuthor: "Our Book Author",
+          bookPrice: "3.45",
+          printDetails: function () {
+            document.write(this.bookName + " " + this.bookAuthor + " " + this.bookPrice);
+            document.write("<br></br>");
+          }
+        }
+
+        book.printDetails();
+
+
+      </script>
+    </head>
+
+    <body>
+      <div>
+        <button onclick="grass()">GRASS</button>
+        <button onclick="magenta()">MAGENTA</button>
+        <button onclick="sky()">SKY</button>
+        <button onclick="sun()">SUN</button>
+        <br>
+        <br>
+
+        <form name="login_frm" onsubmit="validate()">
+          <label>Enter your name</label>
+          <input type="text" id="name_txt" onblur="yellow()">
+          <label>Enter your password</label>
+          <input type="password" id="password_txt">
+          <input type="submit" value="submit">
+        </form>
+
+      </div>
+      <div><label>Choose a browser</label>
+        <input list="browsers" name="myBrowser" id="myBrowser">
+        <datalist id="browsers">
+          <option value="Chrome"></option>
+          <option value="Safari"></option>
+          <option value="Firefox"></option>
+          <option value="Edge"></option>
+        </datalist>
+        <br>
+        <br>
+      </div>
+      <div>
+        <label>Enter your age</label>
+        <input type="number">
+        <br>
+        <br>
+      </div>
+      <div>
+        <label>Enter your phone</label>
+        <input type="tel">
+        <br>
+        <br>
+      </div>
+      <div>
+        <label>Enter your email</label>
+        <input type="email">
+        <br>
+        <br>
+      </div>
+      <div>
+        <label>Enter the time</label>
+        <input type="time">
+        <br>
+        <br>
+      </div>
+      <div>
+        <label>Enter date</label>
+        <input type="date">
+        <br>
+        <br>
+      </div>
+      <br>
+      <br>
+      <canvas id="canvas1" width="800" height="500" style="border: 10px solid green;">
+
+
+      </canvas>
+      <script>
+
+        var c = document.getElementById("canvas1");
+        var ctx = c.getContext("2d");
+
+        ctx.fillStyle = "red";
+        ctx.fillRect(55, 55, 150, 75);
+        ctx.fillStyle = "black"
+        ctx.fillRect(535, 55, 200, 75);
+        ctx.fillRect(610, 55, 50, 300);
+        ctx.fillRect(555, 200, 150, 35);
+        ctx.fillRect(555, 320, 150, 35);
+        ctx.fillRect(555, 340, 35, 75);
+        ctx.fillRect(670, 340, 35, 75);
+
+        ctx.beginPath();
+        ctx.arc(400, 350, 100, 0, Math.PI * 2, true);
+        ctx.stroke();
+
+      </script>
+
+    </body>
+
+  </html>

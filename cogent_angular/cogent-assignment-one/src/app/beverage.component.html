@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular Framework</title>
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <th>Bev Number</th>
+        <th>Bev Name</th>
+        <th>Bev Price</th>
+        <th>Bev Desc</th>
+        <th>Bev Image</th>
+      </tr>
+      <tr>
+        <td>{{bevNo[0]}}</td>
+        <td>{{bevName[0]}}</td>
+        <td>{{bevPrice[0]}}</td>
+        <td>{{bevDesc[0]}}</td>
+        <td><img [src]="bevImg[0]"></td>
+        <button (click)="delete(0)">Delete</button>
+        <button (click)="update(0)">Update</button>
+      </tr>
+      <tr>
+        <td>{{bevNo[1]}}</td>
+        <td>{{bevName[1]}}</td>
+        <td>{{bevPrice[1]}}</td>
+        <td>{{bevDesc[1]}}</td>
+        <td><img [src]="bevImg[1]"></td>
+        <button (click)="delete(1)">Delete</button>
+        <button (click)="update(1)">Update</button>
+      </tr>
+      <tr>
+        <td>{{bevNo[2]}}</td>
+        <td>{{bevName[2]}}</td>
+        <td>{{bevPrice[2]}}</td>
+        <td>{{bevDesc[2]}}</td>
+        <td><img [src]="bevImg[2]"></td>
+        <button (click)="delete(2)">Delete</button>
+        <button (click)="update(2)">Update</button>
+      </tr>
+      <tr>
+        <td>{{bevNo[3]}}</td>
+        <td>{{bevName[3]}}</td>
+        <td>{{bevPrice[3]}}</td>
+        <td>{{bevDesc[3]}}</td>
+        <td><img [src]="bevImg[3]"></td>
+        <button (click)="delete(3)">Delete</button>
+        <button (click)="update(3)">Update</button>
+      </tr>
+      <tr id="item5">
+        <td>{{bevNo[4]}}</td>
+        <td>{{bevName[4]}}</td>
+        <td>{{bevPrice[4]}}</td>
+        <td>{{bevDesc[4]}}</td>
+        <td><img [src]="bevImg[4]"></td>
+        <button (click)="delete(4)">Delete</button>
+        <button (click)="update(4)">Update</button>
+      </tr>
+
+      <div>
+        <form id="formTable">
+          < </form>
+      </div>
+
+    </table>
+    <br>
+  </body>
+</html>

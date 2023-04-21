@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>That Guy Cliff</title>
+    <style>
+      h1 {
+        background-color: aqua;
+      }
+
+      td {
+        color: navy
+      }
+
+      img {
+        float: right;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <div>
+      <h1>About</h1>
+      <p>Hi, I'm Cliff. I love <a href="https://www.interaction-design.org/literature/topics/ui-design#:~:text=User%20interface%20(UI)%20design%20is,e.g.%2C%20voice%2Dcontrolled%20interfaces."><em>User Interface Design</em></a></p>
+      <img src="code.png" />
+    </div>
+    <div>
+      <h1>Courses</h1>
+      <p>Here are some courses I've taken:</p>
+      <table border="1">
+        <tr>
+          <th>
+            <bold>Course Number</bold>
+          </th>
+          <th>
+            <bold>Course Title</bold>
+          </th>
+          <th>
+            <bold>Semester Taken</bold>
+          </th>
+        </tr>
+        <tr>
+          <th colspan="3">For Credit</th>
+        </tr>
+        <tr>
+          <td>6.812</td>
+          <td>User Interface Design</td>
+          <td>Spring 2014</td>
+        </tr>
+        <tr>
+          <td>6.328</td>
+          <td>AI Design</td>
+          <td>Summer 2014</td>
+        </tr>
+        <tr>
+          <td>6.822</td>
+          <td>Alogirthm Design</td>
+          <td>Fall 2014</td>
+        </tr>
+        <tr>
+          <th colspan="3">Listener</th>
+        </tr>
+        <tr>
+          <td>6.328</td>
+          <td>AI Design</td>
+          <td>Summer 2014</td>
+        </tr>
+        <tr>
+          <td>6.822</td>
+          <td>Alogirthm Design</td>
+          <td>Fall 2014</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <h1>Courses</h1>
+      <p>I am interested in memes, jokes and sports.</p>
+    </div>
+    <div>
+      <h1>Submit User Information</h1>
+      <p>Would you like to meet? Submit information below</p>
+      <table>
+        <tr>
+          <td>Name: <input type="text"></td>
+        </tr>
+        <tr>
+          <td>Email: <input type="email"></td>
+        </tr>
+        <tr>
+          <td>Gender: <input type="text"></td>
+        </tr>
+        <tr>
+          <td><input type="submit"></td>
+        </tr>
+      </table>
+    </div>
+    <video autoplay controls id="vid" height="300" width="300">
+      <source src="mov_bbb.mp4">
+    </video>
+    <button onclick="playPause()">Play/Pause</button>
+    <canvas id="canvas1" width="800" height="500" style="border: 10px solid green;"></canvas>
+    <script>
+      /*
+      var ctx = document.getElementById("{vid}");
+      function playPause() {
+        if (ctx.paused) {
+          ctx.play();
+        } else {
+          ctx.pause();
+        }
+      }*/
+      var ctx = document.getElementById('canvas1');
+      var gtk = ctx.getContext("2d");
+      ctx.fillStyle("red");
+      ctx.fillRect(25, 25, 150, 75);
+    </script>
+  </body>
+</html>
