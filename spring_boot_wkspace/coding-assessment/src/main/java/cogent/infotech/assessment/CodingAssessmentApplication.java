@@ -38,7 +38,7 @@ public class CodingAssessmentApplication {
 		
 		List<Movie> movies = new ArrayList<>();
 		movies.add(new Movie(1,"jaws","horror",2,"April"));
-		movies.add(new Movie(1,"balloons","comedy",3,"May"));
+		movies.add(new Movie(2,"balloons","comedy",3,"May"));
 		
 		movieRepo.saveAll(movies);
 		
