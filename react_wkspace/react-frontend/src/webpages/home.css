@@ -1,0 +1,122 @@
+div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: solid black;
+    border-top: solid black;
+}
+
+.div-add-search {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+}
+
+.button-search {
+    background-color: blue;
+    color: white;
+    opacity: .8;
+    margin-bottom: 20px;
+}
+
+.button-add {
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    border-radius: 12px;
+    opacity: .8;
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+}
+
+@media (max-width: 800px) {
+    table {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+th {
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+img {
+    width: 50%;
+    border: solid black;
+}
+
+@media (max-width: 800px) {
+    img {
+        width: 60px;
+        height: auto;
+    }
+}
+
+td {
+    padding: 25px 25px 25px 0px;
+    text-align: left;
+}
+
+.td-img {
+    text-align: center;
+    padding: 5px;
+}
+
+.td-email, .td-first-name, .td-last-name {
+    padding: 0px;
+    overflow-x: scroll;
+    max-width: 100px;
+}
+
+.td-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 75px 0px;
+}
+
+@media (max-width: 800px) {
+    .td-buttons {
+        flex-direction: column;
+        padding: 40px 0px;
+    }
+}
+
+.button-update {
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    border-radius: 12px;
+    opacity: .8;
+}
+
+.button-delete {
+    background-color: red;
+    padding: 10px;
+    color: white;
+    border-radius: 12px;
+    opacity: .8;
+}
